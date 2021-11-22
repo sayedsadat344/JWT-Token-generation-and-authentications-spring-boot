@@ -11,19 +11,21 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 
-import javax.*;
 import javax.validation.constraints.Size;
 import java.util.Collection;
 
-@Entity
+@Entity(name = "user")
+@Table(name = "user_tbl")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 public class User {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_tbl_generator")
+    @SequenceGenerator(name = "user_tbl_generator", sequenceName = "user_tbl_seq", allocationSize = 1)
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Basic(optional = false)

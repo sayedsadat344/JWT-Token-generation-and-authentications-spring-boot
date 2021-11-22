@@ -1,7 +1,7 @@
 package com.example.security.base;
 
 public class UserDtoMapper {
-    public User map(UserDTO userDTO){
+    public static User map(UserDTO userDTO){
         User newUser = new User();
         newUser.setName(userDTO.getName());
         newUser.setEmail(userDTO.getEmail());

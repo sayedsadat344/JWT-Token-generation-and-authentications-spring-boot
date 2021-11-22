@@ -7,17 +7,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class UserServices {
+
+
     @Autowired
-    private UserDtoMapper userDtoMapper;
+    UserRepository userRepository;
+
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     public User saveUser(UserDTO userDTO){
 
         userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
-        User user= userDtoMapper.map(userDTO);
-
-        return user;
+        User user= UserDtoMapper.map(userDTO);
+        return userRepository.save(user);
 
     }
 }
