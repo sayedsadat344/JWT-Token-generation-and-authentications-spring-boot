@@ -1,5 +1,6 @@
-package com.example.security.security;
+package com.example.security.security.utils;
 
+import com.example.security.security.authService.JwtUserDetailsService;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -14,6 +15,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+
+
+
+/***
+ * Developer: Sayed Hussainullah Sadat
+ * Github: https://github.com/sayedsadat344
+ * LinkedIn: https://www.linkedin.com/in/sayed-hussainullah-sadat-160800182/
+ * Stack-overflow: https://stackoverflow.com/users/8985718/sayed-hussainullah-sadat
+ */
 
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {

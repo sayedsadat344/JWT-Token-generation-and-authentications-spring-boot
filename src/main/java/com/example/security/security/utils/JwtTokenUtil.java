@@ -1,4 +1,4 @@
-package com.example.security.security;
+package com.example.security.security.utils;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -13,7 +13,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-
+/***
+ * Developer: Sayed Hussainullah Sadat
+ * Github: https://github.com/sayedsadat344
+ * LinkedIn: https://www.linkedin.com/in/sayed-hussainullah-sadat-160800182/
+ * Stack-overflow: https://stackoverflow.com/users/8985718/sayed-hussainullah-sadat
+ */
 
 @Component
 public class JwtTokenUtil implements Serializable {

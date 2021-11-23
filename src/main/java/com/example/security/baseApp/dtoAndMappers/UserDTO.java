@@ -1,15 +1,18 @@
-package com.example.security.base;
+package com.example.security.baseApp.dtoAndMappers;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.validation.constraints.Size;
+
+
+/***
+ * Developer: Sayed Hussainullah Sadat
+ * Github: https://github.com/sayedsadat344
+ * LinkedIn: https://www.linkedin.com/in/sayed-hussainullah-sadat-160800182/
+ * Stack-overflow: https://stackoverflow.com/users/8985718/sayed-hussainullah-sadat
+ */
 
 @Data
 @NoArgsConstructor

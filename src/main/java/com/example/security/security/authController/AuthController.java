@@ -1,5 +1,9 @@
-package com.example.security.security;
+package com.example.security.security.authController;
 
+import com.example.security.security.utils.JwtRequest;
+import com.example.security.security.utils.JwtResponse;
+import com.example.security.security.utils.JwtTokenUtil;
+import com.example.security.security.authService.JwtUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -7,8 +11,16 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+
+/***
+ * Developer: Sayed Hussainullah Sadat
+ * Github: https://github.com/sayedsadat344
+ * LinkedIn: https://www.linkedin.com/in/sayed-hussainullah-sadat-160800182/
+ * Stack-overflow: https://stackoverflow.com/users/8985718/sayed-hussainullah-sadat
+ */
+
 
 @RestController
 @RequestMapping(value="/api")
@@ -34,7 +46,7 @@ public class AuthController {
 
         final String token = jwtTokenUtil.generateToken(userDetails);
 
-        return ResponseEntity.ok(new JwtResponse(token,authenticationRequest.getUsername(),"sadat@gmail.com"));
+        return ResponseEntity.ok(new JwtResponse(token,authenticationRequest.getUsername(),"theemail@g.com"));
     }
 
     private void authenticate(String username, String password) throws Exception {

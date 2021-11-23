@@ -1,6 +1,8 @@
-package com.example.security.security;
+package com.example.security.security.securityConfigurations;
 
 
+import com.example.security.security.utils.JwtAuthenticationEntryPoint;
+import com.example.security.security.utils.JwtRequestFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +17,16 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+
+/***
+ * Developer: Sayed Hussainullah Sadat
+ * Github: https://github.com/sayedsadat344
+ * LinkedIn: https://www.linkedin.com/in/sayed-hussainullah-sadat-160800182/
+ * Stack-overflow: https://stackoverflow.com/users/8985718/sayed-hussainullah-sadat
+ */
+
+
 
 @Configuration
 @EnableWebSecurity

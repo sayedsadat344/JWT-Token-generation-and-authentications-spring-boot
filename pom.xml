@@ -15,6 +15,21 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
+	<developers>
+		<developer>
+			<id>sh-sadat</id>
+			<name>Sayed Hussainullah Sadat</name>
+			<organization>I Engineering Group Afghanistan</organization>
+
+			<roles>
+				<role>Software Developer</role>
+				<role>IoT Programmer</role>
+			</roles>
+
+		</developer>
+	</developers>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -98,5 +113,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
 
 </project>

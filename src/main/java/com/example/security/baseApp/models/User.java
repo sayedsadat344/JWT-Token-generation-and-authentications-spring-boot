@@ -1,4 +1,4 @@
-package com.example.security.base;
+package com.example.security.baseApp.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
@@ -6,13 +6,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 
 import javax.validation.constraints.Size;
-import java.util.Collection;
+
+
+
+/***
+ * Developer: Sayed Hussainullah Sadat
+ * Github: https://github.com/sayedsadat344
+ * LinkedIn: https://www.linkedin.com/in/sayed-hussainullah-sadat-160800182/
+ * Stack-overflow: https://stackoverflow.com/users/8985718/sayed-hussainullah-sadat
+ */
 
 @Entity(name = "user")
 @Table(name = "user_tbl")
@@ -30,19 +36,19 @@ public class User {
 
     @Basic(optional = false)
     @NotNull
-    @Column(name = "employee_name")
+    @Column(name = "name")
     private String name;
 
 
     @Basic(optional = false)
     @NotNull
-    @Column(name = "employee_last_name")
+    @Column(name = "lastname")
     private String lastName;
 
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 100)
-    @Column(name = "employee_email")
+    @Column(name = "email")
     private String email;
 
 
